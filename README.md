@@ -30,7 +30,7 @@ attributs:
 
 fonctions:
 
-```C
+```c
 /* ajoute un utilisateur dans la bdd */
 void createUser(char *pseudo, char *password);
 /* supprime un utilisateur de la bdd */
@@ -61,7 +61,7 @@ attributs
 
 fonctions:
 
-```C
+```c
 /* vérifie si le livre est emprunté */
 int isBorrowed(int id_livre);
 /* emprunte un livre */
