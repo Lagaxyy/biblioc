@@ -3,14 +3,15 @@ Projet de bibliothèque en langage C
 
 ## Notes
 
-- Commandes en entrée
-    - list: affiche la liste des livres
-        - filtres (genre, ...)
-    - login: se connecte à un compte existant
-    - signup: crée un compte (pseudo unique)
-    - logout: se déconnecte du compte si connecté
-    - borrow: emprunte un livre si disponible
-    - return: retourne le livre emprunté
+### Commandes en entrée
+
+- list: affiche la liste des livres
+    - filtres (genre, ...)
+- login: se connecte à un compte existant
+- signup: crée un compte (pseudo unique)
+- logout: se déconnecte du compte si connecté
+- borrow: emprunte un livre si disponible
+- return: retourne le livre emprunté
 
 ### BDD
 
