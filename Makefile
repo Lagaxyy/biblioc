@@ -1,11 +1,18 @@
 CC=gcc
-CFLAGS=-ansi -Wall
+CFLAGS=-ansi -Wall -lsqlite3
 
-BIN=main
+BIN=src/main
 
 OBJ = ${BIN}.o \
+      src/helpers/helpers.o
 
-all: ${BIN}
+all: ${OBJ}
+	${CC} ${CFLAGS} -o ${BIN} ${OBJ}
+	./${BIN}
+
+debug: CFLAGS += -g -fsanitize=address
+debug: ${OBJ}
+	${CC} ${CFLAGS} -o ${BIN} ${OBJ}
 	./${BIN}
 
 clean:
