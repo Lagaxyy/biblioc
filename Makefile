@@ -1,13 +1,17 @@
 CC=gcc
-CFLAGS=-ansi -Wall
+CFLAGS=-ansi -Wall -lsqlite3
 
-BIN=main
+BIN=src/main
 
-OBJ = ${BIN}.o \
+OBJ = src/users/users.o
 
-all: ${BIN}
+all: ${BIN} ${OBJ}
 	./${BIN}
 
+test: src/test.o ${OBJ}
+	${CC} ${CFLAGS} -o src/test src/test.o ${OBJ}
+	./src/test
+
 clean:
-	${RM} ${BIN} ${OBJ}
+	${RM} ${BIN} ${OBJ} src/test.o src/test
 
