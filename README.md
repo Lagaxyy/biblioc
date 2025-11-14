@@ -34,8 +34,12 @@ fonctions:
 /* ajoute un utilisateur dans la bdd */
 void createUser(char *pseudo, char *password);
 /* supprime un utilisateur de la bdd */
-void deleteUser(char *pseudo);
+void deleteUser(char *pseudo, int isConnected);
+/* permet à l'utilisateur de se connecter */
+/* renvoie 1 si il est connecté, et 0 sinon */
+int connectUser(char *pseudo, char *password);
 /* vérifie si le pseudo existe et le mot de passe correspond */
+/* renvoie 1 si il existe, et 0 sinon */
 int existsUser(char *pseudo, char *password);
 ```
 
